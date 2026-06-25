@@ -1,0 +1,23 @@
+{
+  "name": "@ana-variedades/agentes",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Ecosistema de sub-agentes especializados (Investigador, Ejecutor, Validador) con trazabilidad. Portátil: cópialo a cualquier repo.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "demo": "npm run build && node dist/index.js",
+    "investigar": "npm run build && node dist/investigador/cli.js",
+    "validar": "npm run build && node dist/validador/cli.js"
+  },
+  "keywords": ["agents", "ai", "orchestration", "traceability"],
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "typescript": "^5.5.4"
+  }
+}
