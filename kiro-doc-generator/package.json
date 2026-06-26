@@ -1,0 +1,25 @@
+{
+  "name": "@ia-trabajos/kiro-doc-generator",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Generador de documentación Markdown a partir de código TypeScript/JavaScript: extrae los símbolos exportados con sus comentarios JSDoc y produce una referencia de API + árbol del proyecto. Portátil: cópialo a cualquier repo.",
+  "type": "module",
+  "bin": {
+    "kiro-doc": "dist/cli.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "demo": "npm run build && node dist/cli.js generate --root .. --include kiro-doc-generator --out docs/DEMO.md",
+    "generate": "npm run build && node dist/cli.js generate"
+  },
+  "keywords": ["documentation", "docs", "markdown", "generator", "typescript", "jsdoc", "api-reference"],
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "typescript": "^5.5.4"
+  }
+}
